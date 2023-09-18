@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+        <form id="newForm" class="form-inline mb-3">
+        <label for="amount">Expense Amount</label>
+        <input type="text" id="amount">
+        <label for="description">Enter description</label>
+        <input type="text" id="description">
+        <label for="cat">Choose a category</label>
+        <select id="cat">
+            <option value="Movie">Movie</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Personal">Personal</option>
+        </select>
+        <button type="submit" class="btn btn-dark">Add Expense</button>
+    </form>
+    <ul id="expense" class="expenseClass">
+        
+    </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
