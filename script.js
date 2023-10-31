@@ -1,7 +1,11 @@
-
+let newdiv=document.getElementById('newdiv')
+axios('https://crudcrud.com/api/ad1f095823c141a291ca7e06092cc8ff/expData').then(data=>{
+    console.log(data)})
 let details=document.getElementById('newForm');
 details.addEventListener('submit',addDetails);
 let objCount=0
+
+
 
 function addDetails(e){
     e.preventDefault();
@@ -24,6 +28,9 @@ function addDetails(e){
         .post('https://crudcrud.com/api/ad1f095823c141a291ca7e06092cc8ff/expData',obj1)
         .then((data)=>{
             console.log(data)
+            
+
+            
         })
 
 
