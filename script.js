@@ -1,3 +1,4 @@
+
 let details=document.getElementById('newForm');
 details.addEventListener('submit',addDetails);
 let objCount=0
@@ -7,6 +8,25 @@ function addDetails(e){
     let description=document.getElementById('description');
     let amount=document.getElementById('amount');
     let cat=document.getElementById('cat');
+
+    let dvalue=e.target.description.value
+    let dmount=e.target.amount.value
+    let dcat=e.target.cat.value
+
+
+    const obj1 = {
+        dvalue,
+        dmount,
+        dcat
+    }
+
+    axios
+        .post('https://crudcrud.com/api/ad1f095823c141a291ca7e06092cc8ff/expData',obj1)
+        .then((data)=>{
+            console.log(data)
+        })
+
+
     let li= document.createElement('li')
     li.class='detailsList';
     let rmvbutton=document.createElement('button')
